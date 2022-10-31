@@ -1,0 +1,180 @@
+<html>
+<head>
+    <title>Contact Us | RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="icon" href="images/logo100.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+<!------Contact us --------->
+<section class="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+    <div class="container2">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon2"><i class="fa fa-map-marker"></i></div>
+                <div class="text2">
+                    <h3>Address</h3>
+                    <p>#980 Sugar Mill Road,<br>RedStore, Morinda,<br>990059</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon2"><i class="fa fa-phone"></i></div>
+                <div class="text2">
+                    <h3>Phone</h3>
+                    <p>9915189973</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon2"><i class="fa fa-envelope-o"></i></div>
+                <div class="text2">
+                    <h3>Email</h3>
+                    <p>chandansahani5766@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="contactFrom">
+            <!-----form onsubmit="SendEmail(); reset(); return false;"----->
+            <form method="POST" name="google-sheet">
+                <h2>Send Message</h2>
+                <div class="inputBox2">
+                    <input type="text" required="required" id="name" name="name" placeholder="Name">
+                </div>
+                <div class="inputBox2">
+                    <input type="text" required="required" id="email" name="email" placeholder="Email Id">
+                </div>
+                <div class="inputBox2">
+                    <input type="text" required="required" id="phone" name="phone" placeholder="Phone No">
+                </div>
+                <div class="inputBox2">
+                    <textarea required="required" id="message" name="message" placeholder="How can help you?"></textarea>
+                </div>
+                <div class="inputBox2">
+                    <input type="submit" value="Send">
+                </div>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="thanks!" value="false">
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+</section>
+<!-----------footer--------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <a href="https://play.google.com/store/apps/details?id=in.mynamaste.foodclub_gro"><img src="images/play-store.png"></a>
+                    <a href="https://apps.apple.com/ee/app/redstore/id1520480338"><img src="images/app-store.png"></a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <a href="index.html"><img src="images/logo-white.png"></a>
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many. </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Link</h3>
+                <ul>
+                    <a href="coupon.html"><li>Coupons</li></a>
+                    <a href="blog.html"><li>Blog Post</li></a>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <a href="https://www.facebook.com/profile.php?id=100086476725694"><li>Facebook</li></a>
+                    <a href="https://twitter.com/REDSTORE_"><li>Twitter</li></a>
+                    <a href="https://www.instagram.com/red_store002/"><li>Instagram</li></a>
+                    <a href="https://www.youtube.com/channel/UC3usjN7ttOB2cW1tZ1g6FLg"><li>YouTube</li></a>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">☺ Copyright 2022-Website</p>
+    </div>
+</div>
+
+<!-------js for toggle menu-------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight = "0px")
+                {
+                   MenuItems.style.maxHeight = "200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px";
+                }
+        }
+    </script>
+
+<!---js for contact page
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function SendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "chandansahani5766@gmail.com",
+            Password : "sahani@kundan#123",
+            To : 'free3fire39@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form for Enquiry",
+            Body : "Name: "+ document.getElementById("name").value
+                    +"<br> Email: " + document.getElementById("email").value
+                    +"<br> Phone No: " + document.getElementById("phone").value
+                    +"<br> Message: " + document.getElementById("message").value
+        }).then(
+        message => alert("Message Sent Succesfully")
+        );
+    }
+</script>
+<script>
+    function submit(){ $("#target").submit(); }
+</script>------->
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzlrDSnNHq4ouxfmmih9U3kmi58Dkfkf80tuonV4MJiiDsHQj293ya0hybCLp2ac4UiVQ/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+
+</html>
